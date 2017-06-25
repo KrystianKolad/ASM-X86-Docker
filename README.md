@@ -1,8 +1,7 @@
 x86 ASM development container
 =============================
 
-Vim is the editor installed with syntax highlighting via [vim-gas](https://github.com/Shirk/vim-gas/).
-Source code is loaded in to the container via a volume.  Version control should be done outside of the container.
+My own version of [JustAdam](https://github.com/JustAdam/docker-asm) container. I Added Nano and cloning code from files/ to our workspace. Also using root instead normal user.
 
 ### Build the container
 
@@ -26,8 +25,8 @@ $ docker start -ai asm-dev
 ### Compile asm code
 
 ```
-$ touch plik.o					# worzymy "plik.o"
-$ as [..] plik.s –o plik.o 		# kompiluj plik źródłowy – wynik w pliku „plik.o”
-$ ld [..] plik.o –o plik 		# konsoliduj – wynik w pliku wykonalnym „plik”
-$ ./plik 						# uruchom program „plik” z katalogu bieżącego (./) 
+$ touch file.o					# create "file.o"
+$ as [..] file.s –o file.o 		# compile source code to „file.o”
+$ ld [..] file.o –o file 		# Consolidation – result in executable file „file”
+$ ./file 						# run program „file” from current directory(./) 
 ```
