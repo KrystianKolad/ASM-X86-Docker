@@ -26,7 +26,8 @@ $ docker start -ai asm-dev
 ### Compile asm code
 
 ```
-$ as [..] plik.s –o plik.o 	# kompiluj plik źródłowy – wynik w pliku „plik.o”
-$ ld [..] plik.o –o plik 	# konsoliduj – wynik w pliku wykonalnym „plik”
-$ ./plik 					# uruchom program „plik” z katalogu bieżącego (./) 
+$ touch plik.o					# worzymy "plik.o"
+$ as [..] plik.s –o plik.o 		# kompiluj plik źródłowy – wynik w pliku „plik.o”
+$ ld [..] plik.o –o plik 		# konsoliduj – wynik w pliku wykonalnym „plik”
+$ ./plik 						# uruchom program „plik” z katalogu bieżącego (./) 
 ```
