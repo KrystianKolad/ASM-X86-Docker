@@ -5,10 +5,9 @@ FROM ubuntu:14.04
 RUN apt-get clean && \
     apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
-    apt-get clean && \
-	apt-get install nano
+    apt-get clean
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y yasm gdb gcc vim curl && \
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y yasm gdb gcc vim curl make nano && \
     apt-get clean
 
 ENV TIMEZONE Europe/Oslo
