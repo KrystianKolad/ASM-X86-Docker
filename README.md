@@ -46,3 +46,6 @@ $ as [..] file.s –o file.o 		# compile source code to „file.o”
 $ ld [..] file.o –o file 		# Consolidation – result in executable file „file”
 $ ./file 						# run program „file” from current directory(./) 
 ```
+
+### Image
+[Here](https://hub.docker.com/r/krystiankolad/asm-x86-docker/) you can download image you can make as basic to your dockerfile. You don't need to build it again and again then.
