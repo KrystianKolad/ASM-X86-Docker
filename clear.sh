@@ -1,5 +1,2 @@
-#/bin/bash
-clearContainer="docker rm asm-dev"
-clearImage="docker rmi asmx86"
-eval $clearContainer
-eval $clearImage
+docker rm asm-dev
+docker rmi asmx86
