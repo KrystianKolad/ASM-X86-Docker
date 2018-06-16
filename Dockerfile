@@ -7,7 +7,7 @@ RUN apt-get clean && \
     DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
     apt-get clean
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y yasm gdb gcc vim curl make nano && \
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y yasm gdb gcc vim curl make nano emacs && \
     apt-get clean
 
 ENV TIMEZONE Europe/Oslo
@@ -24,7 +24,5 @@ ENV HOME /home/asm
 RUN curl -s https://raw.githubusercontent.com/Shirk/vim-gas/master/syntax/gas.vim > /home/asm/.vim/syntax/gas.vim
 ADD .vimrc /home/asm/.vimrc
 
-VOLUME ["/workspace"]
 WORKDIR /workspace
-ADD /files/. /workspace/
 ENTRYPOINT ["/bin/bash"]
